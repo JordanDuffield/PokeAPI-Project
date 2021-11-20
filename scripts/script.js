@@ -1,15 +1,15 @@
 /* Author: Jordan Duffield
  * Description: this script aims to retreive information from the PokeAPI and display the number, name and image
  * on a html webpage. Async functions aid in the fetching of information from the API.
- * TO DO: Write css, retrieve actual image from the API
- * DONE: retrieve pokemon id number and name from the API, loop for first 151 pokemon
+ * TO DO: Write css
+ * DONE: retrieve pokemon id number and name from the API, loop for first 151 pokemon, retrieve image content
  */
 
 // maxNum refers to the number of original pokemon, including Mew
 const maxNum = 151;
 const poke = document.getElementById("pokemon");
 
-// async to await getPokemon function until 150 pokemon have been fetched
+// async to await getPokemon function until original group of pokemon have been fetched
 // only the first 151 pokemon will be accessed.
 const fetchPokemon = async () => 
 {
@@ -47,13 +47,15 @@ function displayPokemonData(pokemon)
     const pokeData = `
         ${idNumber}
         ${name}
-        ${pokeImg}
     `;
 
     pokemonInfo.innerHTML = pokeData;
 
     //appends the new div of pokemonInfo into the static html div poke
     poke.appendChild(pokemonInfo);
+
+    //appends the image itself to the poke div
+    poke.appendChild(pokeImg);
 }
 
 // call fetchPokemon()
