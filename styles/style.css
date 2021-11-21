@@ -1,0 +1,27 @@
+.pokemon 
+{
+   
+    font-family:Arial, Helvetica, sans-serif;
+    margin: auto;
+    color:white;
+    vertical-align:middle;
+    text-transform:capitalize;
+    text-align:justify;
+    display:flex;
+    align-items:space-between;
+    margin:0 auto;
+    max-width: 800px;
+    flex-wrap:wrap;
+}
+
+body 
+{
+    background-color: #242424;
+}
+
+h1 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    text-align: center;
+}
